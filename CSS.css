@@ -5,13 +5,15 @@
     box-sizing: border-box;
     max-width: 100%;
     text-decoration: none;
+    color: inherit;
 }
 
 html{
     font-size: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* background: linear-gradient(90deg, rgba(199,137,241,1) 0%, rgba(255,190,248,1) 50%, rgba(252,240,183,1) 68%); */
-    max-width: 100%; 
+    max-width:100%;
+    
 }
  
 body {
@@ -20,6 +22,12 @@ body {
     background-repeat: no-repeat;  
     background-attachment: fixed;
     position: relative;
+    backdrop-filter: blur(2px);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 .header, .contenedorprincipal, footer {
     /* Agrega un fondo blanco detrás del texto para mejorar la legibilidad */
@@ -40,8 +48,6 @@ body {
     align-items: center;
     padding: 20px;
 }
-
-
 
 .logo-titulo{
     display: flex;
@@ -84,24 +90,28 @@ h2{
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #c5a742;
-    font-weight: bold;
     font-size: 1.5rem;
-    text-shadow:1px 1px 1px black
+    text-shadow:1px 1px 1px white;
+    font-family: "Amaranth", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #2d3103;
+    text-align: center;
+    
 }
-
-
 
 h3 {
     margin-top: 20px;
     margin-bottom: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 20px;
-    text-align: justify;
-    color: #c5a742;
-    text-shadow:1px 1px 1px rgb(36, 20, 20);
+    text-align: center;
+    color:#2d3103;
+    text-shadow:1px 1px 1px white;
+    font-family: "Amaranth", sans-serif;
+    font-weight: 700;
+    font-style: italic;
 }
+
 p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #c5a742;
@@ -113,6 +123,8 @@ p {
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
     padding: 1%;
+    flex-grow: 1;
+    padding: 1rem;
 }
 
 .menu {
@@ -122,33 +134,29 @@ p {
 }
 
 
-.imagenbody{
+/*.imagenbody{
     width: 400px;
     height: 100%;
-}
+}*/
 
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 1rem;
     font-size: 1.5vw;
     color: #2d3103;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
     width: 100%; 
-    bottom: 0;
-    
-    
-
 }
 
 .grupoIconos {
     display: inline-block;
-    margin-bottom: 10px;
+    flex-grow: 1;
 }
 
 .grupoIconos img {
     width: 40px;
-    margin: 0 10px;
+    margin: 10px;  
 }
 
 .contenedor {
@@ -199,8 +207,9 @@ input, textarea, select {
     padding: 8px; /* Espacio interno */
     margin-bottom: 10px; /* Espacio inferior entre campos */
     border: 1px solid #ccc; /* Borde opcional */
-    border-radius: 4px; /* Opcional: bordes redondeados */
+    border-radius: 4px; /* bordes redondeados */
     box-sizing: border-box; /* Incluye padding y border en width */
+    resize: none;
 }
 
 
@@ -213,7 +222,7 @@ label {
 }
 /* Estilo para centrar el contenedor del formulario */
 .form-container {
-    width: 500px; /* Ajusta el ancho del contenedor según tus preferencias */
+    width: 500px; /* Ajusta el ancho del contenedor */
     margin: auto; /* Centra el contenedor horizontalmente */
     padding: 20px; /* Espacio interno alrededor del formulario */
     border-radius: 10px; 

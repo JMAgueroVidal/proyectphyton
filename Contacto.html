@@ -7,61 +7,61 @@
     <title>Centro Cedes</title>
     <link rel="icon" type="image/x-icon" href="Imagenes/favicon3.ico">
     <link rel="stylesheet" href="CSS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 
 <body>
     <header>
         <div class="logo-titulo">
             <div class="logoimg">
-                <img src="Imagenes/Logo3.png" alt="Logo">
+                <img src="Imagenes/Logo3.png" alt="Logo del Centro Cedes">
             </div>
-            <h1>Centro Cedes</h1>
+            <h1 class="animate__animated animate__bounce"><a href="Inicio.html">CENTRO CEDES</a></h1>
         </div>
         <nav>
             <ul class="navigation">
                 <li><a href="Inicio.html">Inicio</a></li>
                 <li><a href="Cursos.html">Cursos</a></li>
-                <li><a href="Terapias.html">Terapias Holisticas</a></li>
+                <li><a href="Terapias.html">Terapias Holísticas</a></li>
                 <li><a href="Contacto.html">Contacto</a></li>
             </ul>
         </nav>
-
     </header>
 
     <main>
         <br><br><br>
         <div class="form-container">
-            <form action="show_data.html" class="form-elementor">
+            <form action="show_data.html" class="form-elementor" onsubmit="return validateForm()">
                 <fieldset>
                     <div class="form-group">
                         <label for="nombre">Nombre:</label>
-                        <input type="text" name="nombre" id="nombre">
+                        <input type="text" name="nombre" id="nombre" required>
                     </div>
                     <div class="form-group">
                         <label for="apellido">Apellido:</label>
-                        <input type="text" name="apellido" id="apellido">
+                        <input type="text" name="apellido" id="apellido" required>
                     </div>
                     <div class="form-group">
                         <label for="telefono">Teléfono/WhatsApp:</label>
-                        <input type="text" name="telefono" id="telefono">
+                        <input type="text" name="telefono" id="telefono" pattern="\d+" required>
                     </div>
                     <div class="genero">
-                        <label for="genero">Género:</label>
-                        <input type="radio" name="genero" value="masculino">Masculino
+                        <label>Género:</label>
+                        <input type="radio" name="genero" value="masculino" required>Masculino
                         <input type="radio" name="genero" value="femenino">Femenino
                         <input type="radio" name="genero" value="otros">Otros
                     </div><br>
                     <div class="form-group">
                         <label for="localidad">Localidad:</label>
-                        <input type="text" name="localidad" id="localidad">
+                        <input type="text" name="localidad" id="localidad" required>
                     </div>
                     <div class="form-group">
                         <label for="dondenosconocio">¿Dónde nos conoció?</label>
-                        <input type="text" name="dondenosconocio" id="dondenosconocio">
+                        <input type="text" name="dondenosconocio" id="dondenosconocio" required>
                     </div>
                     <div class="form-group">
                         <label for="consulta">Consulta:</label>
-                        <textarea name="consulta" id="consulta" cols="30" rows="5"></textarea>
+                        <textarea name="consulta" id="consulta" cols="30" rows="5" required></textarea>
                     </div>
                 </fieldset><br>
                 <div class="elementor">
@@ -81,15 +81,14 @@
     </div>
     <footer id="footerPosition">
         <div class="grupoIconos">
-            <a class="iconoNav" href="https://www.instagram.com/" title="Instagram" alt="Seguinos en Instagram"><img
-                    src="Imagenes/instagram.png" alt="Ícono de Instagram" href=""></a>
-            <a class="iconoNav" href="https://api.whatsapp.com/send?phone=2494628852" title="Whatsapp"
-                alt="Comunicate por Whatsapp"><img src="Imagenes/whatsapp.png" alt="Ícono de Whatsapp"></a>
-                <a class="iconoNav" href="https://www.facebook.com/" title="facebook" alt="Seguimos en facebook"><img src="Imagenes/facebook.png" alt="Icono de facebook"></a>
+            <a class="iconoNav" href="https://www.instagram.com/" title="Instagram"><img src="Imagenes/instagram.png" alt="Ícono de Instagram"></a>
+            <a class="iconoNav" href="https://api.whatsapp.com/send?phone=2494628852" title="Whatsapp"><img src="Imagenes/whatsapp.png" alt="Ícono de Whatsapp"></a>
+            <a class="iconoNav" href="https://www.facebook.com/" title="Facebook"><img src="Imagenes/facebook.png" alt="Ícono de Facebook"></a>
         </div>
-        <p> Copyright 2024 &copy;. Todos los derechos reservados.
-        <p>
+        <p>Copyright 2024 &copy;. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="validation.js"></script>
 </body>
 
 </html>
