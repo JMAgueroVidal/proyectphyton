@@ -5,7 +5,6 @@
     const inputEmail = document.getElementById('email');
     const inputTelefono = document.getElementById('telefono');
     const genero = document.querySelector('input[name="genero"]:checked');
-    const localidad = document.getElementById('localidad');
     const inputDondenosConocio = document.getElementById('dondenosconocio');
     const inputConsulta = document.getElementById('consulta');
     const parrafo=document.getElementById("error");
@@ -34,7 +33,7 @@
                 warning += 'El teléfono solo puede contener números';
                 valor = true;}
             }
-            if (inputdondenosconocio.value.length<6){
+            if (inputDondenosConocio.value.length<6){
                 warning+='Indique por que medio nos conocio';
                 valor=true;
             }
@@ -47,7 +46,7 @@
         }else{
             parrafo.innerHTML="Enviado";
             formRegister.reset();
+            window.location.href = "show_data.html"
         }
-
 
     });

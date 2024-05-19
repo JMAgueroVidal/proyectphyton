@@ -203,10 +203,10 @@ input, textarea {
 /* Estilo para todos los campos de entrada (input, textarea, select) */
 input, textarea, select {
     width: 100%; /* Asegura que los campos ocupen todo el ancho del contenedor */
-    height: 40px; /* Ajusta la altura según tus preferencias */
+    height: 40px; /* Ajusta la altura */
     padding: 8px; /* Espacio interno */
     margin-bottom: 10px; /* Espacio inferior entre campos */
-    border: 1px solid #ccc; /* Borde opcional */
+    border: 1px solid #ccc; /* Borde */
     border-radius: 4px; /* bordes redondeados */
     box-sizing: border-box; /* Incluye padding y border en width */
     resize: none;
