@@ -31,42 +31,47 @@
     <main>
         <br><br><br>
         <div class="form-container">
-            <form action="show_data.html" class="form-elementor" onsubmit="return validateForm()">
+            <form action="show_data.html" class="form-elementor">
                 <fieldset>
                     <div class="form-group">
                         <label for="nombre">Nombre:</label>
-                        <input type="text" name="nombre" id="nombre" required>
+                        <input type="text" name="nombre" id="nombre">
                     </div>
                     <div class="form-group">
                         <label for="apellido">Apellido:</label>
-                        <input type="text" name="apellido" id="apellido" required>
+                        <input type="text" name="apellido" id="apellido">
                     </div>
                     <div class="form-group">
                         <label for="telefono">Teléfono/WhatsApp:</label>
-                        <input type="text" name="telefono" id="telefono" pattern="\d+" required>
+                        <input type="text" name="telefono" id="telefono">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="text" name="email" id="email">
                     </div>
                     <div class="genero">
                         <label>Género:</label>
-                        <input type="radio" name="genero" value="masculino" required>Masculino
-                        <input type="radio" name="genero" value="femenino">Femenino
-                        <input type="radio" name="genero" value="otros">Otros
+                        <input type="radio" name="genero" id="genero" value="masculino" required>Masculino
+                        <input type="radio" name="genero" id="genero" value="femenino">Femenino
+                        <input type="radio" name="genero" id="genero" value="otros">Otros
                     </div><br>
                     <div class="form-group">
                         <label for="localidad">Localidad:</label>
-                        <input type="text" name="localidad" id="localidad" required>
+                        <input type="text" name="localidad" id="localidad">
                     </div>
                     <div class="form-group">
                         <label for="dondenosconocio">¿Dónde nos conoció?</label>
-                        <input type="text" name="dondenosconocio" id="dondenosconocio" required>
+                        <input type="text" name="dondenosconocio" id="dondenosconocio">
                     </div>
                     <div class="form-group">
                         <label for="consulta">Consulta:</label>
-                        <textarea name="consulta" id="consulta" cols="30" rows="5" required></textarea>
+                        <textarea name="consulta" id="consulta" cols="30" rows="5"></textarea>
                     </div>
                 </fieldset><br>
                 <div class="elementor">
                     <button type="submit" class="elementor-button elementor-size-5m">
                         <span>Enviar</span>
+                        <p id="error" class="error"></p>
                     </button><br>
                 </div>
             </form>
