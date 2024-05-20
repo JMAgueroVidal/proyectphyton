@@ -45,6 +45,14 @@
             parrafo.innerHTML=warning;
         }else{
             parrafo.innerHTML="Enviado";
+
+            localStorage.setItem('nombre', inputnombre.value);
+            localStorage.setItem('apellido', inputapellido.value);
+            localStorage.setItem('email', inputEmail.value);
+            localStorage.setItem('telefono', inputTelefono.value);
+            localStorage.setItem('dondenosconocio', inputDondenosConocio.value);
+            localStorage.setItem('consulta', inputConsulta.value);
+
             formRegister.reset();
             window.location.href = "show_data.html"
         }
