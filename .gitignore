@@ -11,3 +11,7 @@ __pycache__/
 .pyenv/
 # Ignorar archivos de configuración específicos de Python
 *.pyo
+# Ignorar el archivo de configuración del entorno virtual
+pyvenv.cfg
+
+
