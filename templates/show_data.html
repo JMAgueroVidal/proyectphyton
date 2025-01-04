@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Cedes</title>
+    <link rel="icon" type="image/x-icon" href="../static/Imagenes/favicon3.ico">
+    <link rel="stylesheet" href="../static/CSS.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-titulo">
+            <div class="logoimg">
+                <img src="/Imagenes/Logo3.png" alt="Logo">
+            </div>
+            <h1>Centro Cedes</h1>
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="/Cursos.html">Cursos</a></li>
+                <li><a href="/Terapias.html">Terapias Holisticas</a></li>
+                <li><a href="/Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <p align="center">&nbsp;</p>
+    <h1 align="center"><font size="+1">Tu información ha sido enviada:</font></h1>
+
+    <table border="1" align="center" width="226">
+        <tr>
+            <th align="center">Campo del formulario</th>
+            <th align="center">Valor del campo</th>
+        </tr>
+        <tr>
+            <td align="center">Nombre</td>
+            <td align="center" id="mostrarNombre"></td>
+        </tr>
+        <tr>
+            <td align="center">Apellido</td>
+            <td align="center" id="mostrarApellido"></td>
+        </tr>
+        <tr>
+            <td align="center">Email</td>
+            <td align="center" id="mostrarEmail"></td>
+        </tr>
+        <tr>
+            <td align="center">Teléfono</td>
+            <td align="center" id="mostrarTelefono"></td>
+        </tr>
+        <tr>
+            <td align="center">¿Cómo nos conoció?</td>
+            <td align="center" id="mostrarDondenosConocio"></td>
+        </tr>
+        <tr>
+            <td align="center">Consulta</td>
+            <td align="center" id="mostrarConsulta"></td>
+        </tr>
+    </table>
+
+    <script>
+        // Recuperar los datos de localStorage y mostrarlos en la página
+        document.getElementById('mostrarNombre').innerText = localStorage.getItem('nombre');
+        document.getElementById('mostrarApellido').innerText = localStorage.getItem('apellido');
+        document.getElementById('mostrarEmail').innerText = localStorage.getItem('email');
+        document.getElementById('mostrarTelefono').innerText = localStorage.getItem('telefono');
+        document.getElementById('mostrarDondenosConocio').innerText = localStorage.getItem('dondenosconocio');
+        document.getElementById('mostrarConsulta').innerText = localStorage.getItem('consulta');
+    </script>
+
+    <noscript>
+        <tr>
+            <td>
+                <p>You need to turn on Javascript in your browser.</p>
+                <p>In Microsoft Internet Explorer 4 or greater:</p>
+                <ul>
+                    <li>From the "Tools" menu (in IE 4, it's the "View" menu), select "Internet Options".</li>
+                    <li>Click on the "Security" tab.</li>
+                    <li>Click on the "Custom Level" button. (In IE 4, select "Custom"
+                        and then click on "Settings...".)</li>
+                    <li>Under "Active scripting" make sure "Enable" is selected.</li>
+                </ul>
+                <p>In Netscape version 4 or greater:</p>
+                <ul>
+                    <li>From the <b>Edit</b> menu, select <b>Preferences</b>.</li>
+                    <li>In the <b>Category</b> list on the left, click on the word "Advanced".</li>
+                    <li>In the panel on the right, make sure "Enable JavaScript" is checked.</li>
+                    <li>Click the <b>OK</b> button.</li>
+                </ul>
+            </td>
+        </tr>
+    </noscript>
+
+    <footer id="footerPosition">
+        <div class="grupoIconos">
+            <a class="iconoNav" href="https://www.instagram.com/" title="Instagram" alt="Seguinos en Instagram">
+                <img src="/Imagenes/IGpng.png" alt="Ícono de Instagram" href="">
+            </a>
+            <a class="iconoNav" href="https://api.whatsapp.com/send?phone=2494628852" title="Whatsapp"
+                alt="Comunicate por Whatsapp">
+                <img src="/Imagenes/WSpng.png" alt="Ícono de Whatsapp">
+            </a>
+        </div>
+        <p> Copyright 2024 &copy;. Todos los derechos reservados.
+        <p>
+    </footer>
+</body>
+
+</html>
